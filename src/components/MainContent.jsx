@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import HelpArea from './HelpArea';
-
+// this is a test comment
 function MainContent() {
   const [helpVisible, setHelpVisible] = useState(false);
 
