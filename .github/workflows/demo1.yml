@@ -3,7 +3,15 @@ on:
   pull_request:
     types:
       - opened
+    
   workflow_dispatch:
+  push:
+    branches: 
+      - main
+      - "dev-*" # dev-new dev-this-is-new  but the / is excluded
+      - "feat/**" # feat/new feat/new/branch   The / is included
+    paths-ignore:
+      - '.github/worklows/*' # not declenched if we change something in the workflows files
 jobs:
   deploy:
     runs-on: ubuntu-latest
